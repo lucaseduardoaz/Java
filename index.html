@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá Mundo</title>
+    <script>
+        function exibirMensagem() {
+            alert("Olá Mundo");
+        }
+    </script>
+</head>
+<body style="margin: 80px 200px; text-align: center;"></body>
+<button onclick="exibirMensagem()">Clique aqui</button>
+    
+    <h1 style="color: grey;" Elemento id</h1>
+    <script>
+        function alterarTexto() {
+            document.getElementById("meuParagrafo").textContent = "TEXTO ALTERADO";
+        }
+    </script>
+     <p id="meuParagrafo">Texto</p>
+     <button onclick="alterarTexto()">Altere o texto</button>
+     <h3 style="color: grey;">Elemento nome</h3>
+     <script>
+        function alterarCor() {
+            const elementos = document.getElementsByName("meusElementos");
+            for (const elemento of elementos) {
+                elemento.style.color = "blue";
+            }
+        }
+    </script>
+     <p name="meusElementos">Primeiro</p>
+     <p name="meusElementos">Segundo</p>
+     <button onclick="alterarCor()">Alterar Cor</button>
+     <h2 style="color: grey;">Elemento classe</h2>
+     <style>
+        .meusParagrafos {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function alterarEstilo() {
+            const elementos = document.getElementsByClassName("meusParagrafos");
+            for (const elemento of elementos) {
+                elemento.style.color = "green";
+            }
+        }
+    </script>
+      <p class="meusParagrafos">Primeiro</p>
+      <p class="meusParagrafos">Segundo</p>
+      <button onclick="alterarEstilo()">Alterar Estilo</button>
+
+      <h3 style="color: grey;">Somar números</h1> números</h3>
+    <script>
+        function somar() {
+            const num1 = parseInt(document.getElementById("numero1").value);
+            const num2 = parseInt(document.getElementById("numero2").value);
+            const resultado = num1 + num2;
+            document.getElementById("resultado").textContent = `Resultado: ${resultado}`;
+        }
+    </script>
+     <input type="number" id="numero1" placeholder="Número 1">
+     <input type="number" id="numero2" placeholder="Número 2">
+     <button onclick="somar()">Somar</button>
+     <p id="resultado"></p>
+   
+</body>
+</html>
